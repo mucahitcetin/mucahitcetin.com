@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import Container from "./components/Container";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import './globals.css'
@@ -32,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
+        <Container>{children}</Container>
       </body>
     </html>
   );

@@ -7,14 +7,14 @@ import Contact from './components/Contact';
 
 const HomePage: React.FC = () => {
   return (
-      <main className="flex min-h-screen flex-col bg-background container mx-auto">
-      
-        <Hero/>
-        <Skills/>
-        <Projects/>
-        <Experience/>
-        <Contact/>
-      </main>
+    <main className="flex min-h-screen flex-col container mx-auto">
+
+      <Hero />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+    </main>
   );
 };
 
