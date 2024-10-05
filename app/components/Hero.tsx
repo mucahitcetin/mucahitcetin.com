@@ -28,7 +28,7 @@ const Hero = () => {
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="bg-gradient-to-r from-[#2D7A82] to-[#FC8B4F] bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-[#2D7A82] to-[#FC8B4F] bg-clip-text text-transparent whitespace-nowrap"
             />
 
           </h1>
@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative">
             <Image
-              src="/image/hero-image.png"
+              src="/image/hero.webp"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               width={300}
