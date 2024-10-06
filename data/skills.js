@@ -11,12 +11,13 @@ const skills = [
     { name: "CSS", icon: "/image/css.png" },
     { name: "Firebase", icon: "/image/firebase.png" },
     { name: "Git", icon: "/image/git.png" },
-    { name: "Figma", icon: "/image/figma.png" },
+    { name: "React Query", icon: "/image/react-query.webp" },
+   
     { name: "API Integration", icon: "/image/api.png" },
-    { name: "SASS", icon: "/image/sass.png" },
     { name: "Sentry", icon: "/image/sentry.svg" },
     { name: "SASS", icon: "/image/sass.png" },
-    { name: "SASS", icon: "/image/sass.png" },
+    { name: "Figma", icon: "/image/figma.png" },
+    { name: "Canva", icon: "/image/canva.png" },
   ];
   
   export default skills;

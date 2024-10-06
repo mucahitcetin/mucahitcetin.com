@@ -28,15 +28,16 @@ const Hero = () => {
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="bg-gradient-to-r from-[#2D7A82] to-[#FC8B4F] bg-clip-text text-transparent whitespace-nowrap"
+              className="bg-gradient-to-r from-[#5C4B8A] to-[#FFD700] bg-clip-text text-transparent whitespace-nowrap"
+
             />
 
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptuous.
           </p>
-          <button className="px-1 inline-block py-1 w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:opacity-85 text-white mt-3">
-            <span className="block  bg-gradient-to-r from-[#2D7A82] to-[#FC8B4F]  rounded-full px-5 py-2">
+          <button className="px-1 inline-block py-1 w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:scale-105 transition-all text-white mt-3">
+            <span className="block  bg-gradient-to-r from-[#5C4B8A] to-[#FFD700]  rounded-full px-5 py-2">
               Download CV
             </span>
           </button>
