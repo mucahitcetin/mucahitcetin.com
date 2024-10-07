@@ -8,7 +8,7 @@ const ProjectCards = () => {
       {projects.map((project) => (
         <Card
           key={project.id}
-          className="bg-black shadow-lg p-4 w-full h-full lg:w-[680px] lg:h-[680px] mx-auto"
+          className="bg-primary/45 shadow-lg p-4 w-full h-full lg:w-[680px] lg:h-[680px] mx-auto rounded-lg"
         >
           <div className="grid grid-cols-3 gap-2">
             <Image src={project.image1} alt={`${project.title} Image 1`} className="col-span-1 w-full" />
