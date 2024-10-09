@@ -1,30 +1,54 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
+import ReactPaginate from 'react-paginate';
 import projects from '../../data/projects';
-import { Card, CardFooter, Image } from "@nextui-org/react";
+
+const itemsPerPage = 8;
 
 const ProjectCards = () => {
+  const [currentPage, setCurrentPage] = useState<number>(0);
+
+  const offset = currentPage * itemsPerPage;
+  const currentProjects = projects.slice(offset, offset + itemsPerPage);
+
+  const handlePageChange = (selectedPage: { selected: number }) => {
+    setCurrentPage(selectedPage.selected);
+  };
+
   return (
-    <section className="p-8 grid gap-8 grid-cols-1 ">
-      {projects.map((project) => (
-        <Card
-          key={project.id}
-          className="bg-primary/45 shadow-lg p-4 w-full h-full lg:w-[680px] lg:h-[680px] mx-auto rounded-lg"
-        >
-          <div className="grid grid-cols-3 gap-2">
-            <Image src={project.image1} alt={`${project.title} Image 1`} className="col-span-1 w-full" />
-            <Image src={project.image2} alt={`${project.title} Image 2`} className="col-span-1 w-full" />
-            <Image src={project.image3} alt={`${project.title} Image 3`} className="col-span-1 w-full" />
+    <div>
+      <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2 lg:grid-cols-3">
+        {currentProjects.map((project) => (
+          <div key={project.id} className="bg-primary/15 rounded-xl p-4 cursor-pointer shadow-md hover:shadow-primary transition-all">
+            <img src={project.image} alt={project.title} className="w-full h-80 object-cover rounded-lg" />
+            <h2 className="text-xl font-semibold my-2">{project.title}</h2>
+            <p className="text-base text-gray-700 mb-2">{project.summary}</p>
+            <div className="flex  mt-2">
+              <div className="flex space-x-2 border border-primary/25 rounded-xl px-4 py-1 bg-background">
+                {project.skills.map((skill, skillIndex) => (
+                  <img key={skillIndex} src={skill} alt="skill" className="w-8 h-8 rounded-full hover:scale-110 transition-transform" />
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-2 mt-2">
-            <Image src={project.image4} alt={`${project.title} Image 4`} className="col-span-1 w-full" />
-            <Image src={project.image5} alt={`${project.title} Image 5`} className="col-span-1 w-full" />
-          </div>
-          <CardFooter className="mt-4">
-            <h3 className="text-2xl font-semibold text-primary mb-4">{project.title}</h3>
-          </CardFooter>
-        </Card>
-      ))}
-    </section>
+        ))}
+      </div>
+
+      <ReactPaginate
+        previousLabel={'<'}
+        nextLabel={'>'}
+        breakLabel={'...'}
+        breakClassName={'break-me'}
+        pageCount={Math.ceil(projects.length / itemsPerPage)}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageChange}
+        containerClassName={'pagination'}
+        subContainerClassName={'pages pagination'}
+        activeClassName={'active'}
+      />
+    </div>
   );
 };
 

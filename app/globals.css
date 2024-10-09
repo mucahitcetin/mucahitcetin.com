@@ -17,3 +17,38 @@
     animation: light-effect 2s linear infinite;
   }
   
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 2px solid #5C4B8A; /* Ana sınır rengi */
+    border-radius: 50px; /* Yuvarlak köşeler */
+    text-decoration: none;
+    color: #5C4B8A; /* Yazı rengi */
+    transition: background-color 0.3s, color 0.3s; /* Geçiş efektleri */
+  }
+  
+  .pagination .active a {
+    background-color: #5C4B8A; /* Aktif sayfanın arka plan rengi */
+    color: white; /* Aktif sayfa yazı rengi */
+  }
+  
+  .pagination a:hover {
+    background-color: #ddd;
+    color: #5C4B8A; 
+  }
+  
+  .pagination .break-me {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 2px solid transparent; /* Kırılma noktaları için boş kenarlık */
+    border-radius: 50px; /* Yuvarlak köşeler */
+    color: #007bff; /* Yazı rengi */
+  }
+  

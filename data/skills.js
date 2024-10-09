@@ -12,7 +12,6 @@ const skills = [
     { name: "Firebase", icon: "/image/firebase.png" },
     { name: "Git", icon: "/image/git.png" },
     { name: "React Query", icon: "/image/react-query.webp" },
-   
     { name: "API Integration", icon: "/image/api.png" },
     { name: "Sentry", icon: "/image/sentry.svg" },
     { name: "SASS", icon: "/image/sass.png" },

@@ -5,7 +5,7 @@ type ContainerProps = {
 };
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
-    return <div className="px-4 md:px-10 lg:px-20 bg-background">{children}</div>;
+    return <div className="px-2 md:px-6 lg:px-10 bg-background">{children}</div>;
 };
 
 export default Container;

@@ -16,6 +16,10 @@ const config: Config = {
         tertiary: "#7d8285",
       },
     },
+    boxShadow: {
+      primary: "0 0 15px 0 rgba(45, 122, 130, 0.5)",
+      secondary: "0 0 15px 0 rgba(252, 139, 79, 0.5)",
+    },
   },
   plugins: [],
 };
